@@ -1,18 +1,21 @@
-## Getting Started
+# Proyecto Objetos — Mejora Técnica
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Juego de simulación por consola en Java donde personajes Buenos huyen de los Malos en un tablero de 100×20 celdas.
 
-## Folder Structure
+## Rama de trabajo
+El desarrollo de la mejora se ha realizado en la rama `mejora`. La rama `master` conserva el estado inicial del proyecto.
 
-The workspace contains two folders by default, where:
+## Mejoras aplicadas
+- Migración del proyecto a **Maven** (`pom.xml`, estructura `src/main/java`)
+- **Refactorización** del código: corrección de herencia incorrecta, simplificación de condicionales y limpieza de constructores
+- **Pruebas unitarias** con JUnit 5 (`ElementoTest`, `PersonajeTest`)
+- **Análisis estático** con SonarLint y corrección de problemas detectados
+- **Javadoc** en todas las clases principales (`mvn javadoc:javadoc`)
+- **Integración continua** con GitHub Actions: compila y ejecuta los tests automáticamente en cada push
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+## Comandos principales
+```bash
+mvn compile      # Compilar el proyecto
+mvn test         # Ejecutar las pruebas unitarias
+mvn javadoc:javadoc  # Generar la documentación HTML
+```
